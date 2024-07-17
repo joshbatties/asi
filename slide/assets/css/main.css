@@ -4104,3 +4104,30 @@ input, select, textarea {
 					}
 
 	}
+
+/* Ensure the sections are aligned correctly and adjust spacing */
+.wrapper.style1.special.fade-up .box.alt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper.style1.special.fade-up .box.alt .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper.style1.special.fade-up .box.alt .row.gtr-uniform section {
+    flex: 1 1 30%; /* Adjust width */
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+
+footer.major {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px; /* Adjust margin to move the button upwards */
+}
