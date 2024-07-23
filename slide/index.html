@@ -1,54 +1,69 @@
 <!DOCTYPE HTML>
-
 <html>
-	<head>
-		<title>Ace Steel Innovations</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<head>
+    <title>Ace Steel Innovations</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        .custom-video {
+            position: absolute; /* or relative, depending on your layout */
+            top: 50%; /* Adjust this value to move the video vertically */
+            left: 50%; /* Adjust this value to move the video horizontally */
+            transform: translate(-50%, -50%); /* Centers the video */
+            width: 178%; /* Adjust the size as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">ASI Logo</a></h1>
-					<nav id="nav">
-						<ul>
-							<li>
-								<a href="products.html">Products</a>
-								<ul>
-									<li><a href="index.html">Steel Reinforcing Bar</a></li>
-									<li><a href="index.html">Steel Fabrication</a></li>
-									<li><a href="index.html">Steel Mesh</a></li>
-									<li>
-										<a href="#">Tools & Accessories</a>
-										<ul>
-											<li><a href="#">Mesh</a></li>
-											<li><a href="#">Bar Chairs</a></li>
-											<li><a href="#">Tyre Wires</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="index.html">Projects</a></li>
-							<li><a href="#" class="button primary">Contact Us</a></li>
-						</ul>
-					</nav>
-				</header>
+        #banner .content {
+            position: relative;
+        }
+    </style>
+</head>
+<body class="is-preload landing">
+    <div id="page-wrapper">
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>Ace Steel Innovations</h2>
-							<p>Placeholder text</p>
-						</header>
-						<span class="image"><img src="images/welding.jpg" alt="" /></span>
-					</div>
-				</section>
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">ASI Logo</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="products.html">Products</a>
+                        <ul>
+                            <li><a href="index.html">Steel Reinforcing Bar</a></li>
+                            <li><a href="index.html">Steel Fabrication</a></li>
+                            <li><a href="index.html">Steel Mesh</a></li>
+                            <li>
+                                <a href="#">Tools & Accessories</a>
+                                <ul>
+                                    <li><a href="#">Mesh</a></li>
+                                    <li><a href="#">Bar Chairs</a></li>
+                                    <li><a href="#">Tyre Wires</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="#" class="button primary">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+                <header>
+                    <h2>Ace Steel Innovations</h2>
+                    <p>Placeholder text</p>
+                </header>
+                <span class="image">
+                    <video class="custom-video" src="images/welding_video.mp4" autoplay loop muted playsinline></video>
+                </span>
+            </div>
+        </section>
 
 				<!-- One -->
 <section id="four" class="wrapper style1 special fade-up">
