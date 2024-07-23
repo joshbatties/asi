@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.second-footer {
+    display: none; /* Initially hide the second footer */
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.show-footer {
+    display: block; /* Show the second footer */
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Footer Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="content">
+        <!-- Your main content goes here -->
+        <p>Scroll down to see the second footer.</p>
+        <div style="height: 1500px;"></div> <!-- Dummy content to enable scrolling -->
+    </div>
+    <footer class="main-footer">
+        <div style="flex: 1;">
+            <img src="images/welder.png" alt="Company Logo" style="max-height: 60px;">
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <ul class="copyright" style="list-style: none; padding: 0; margin: 0;">
+                <li>&copy; Ace Steel Innovations. All rights reserved.</li>
+            </ul>
+        </div>
+        <div style="flex: 1; text-align: right;">
+            <p>
+                Address: 1234 Steel Avenue, Metaltown, USA<br>
+                Phone: (123) 456-7890<br>
+                Email: info@acesteel.com
+            </p>
+        </div>
+    </footer>
+    <footer class="second-footer" id="secondFooter">
+        <p>Website Design by Joshua Batties</p>
+        <a href="https://github.com/joshbatties" target="_blank">
+            <img src="images/github.png" alt="GitHub" style="width: 24px; height: 24px;">
+        </a>
+        <a href="https://www.linkedin.com/in/joshua-batties" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+        </a>
+    </footer>
+    
+    
+    
+    
+    
+    <!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('scroll', function() {
+    const mainFooter = document.querySelector('.main-footer');
+    const secondFooter = document.getElementById('secondFooter');
+    const windowHeight = window.innerHeight;
+    const mainFooterRect = mainFooter.getBoundingClientRect();
+
+    // Check if the user has scrolled to the bottom of the main footer
+    if (mainFooterRect.top < windowHeight && mainFooterRect.bottom <= windowHeight) {
+        // Add a wheel event listener to detect further scrolling down
+        window.addEventListener('wheel', detectFurtherScroll);
+    } else {
+        secondFooter.classList.remove('show-footer');
+        window.removeEventListener('wheel', detectFurtherScroll);
+    }
+});
+
+function detectFurtherScroll(event) {
+    if (event.deltaY > 0) { // If the user scrolls down
+        const secondFooter = document.getElementById('secondFooter');
+        secondFooter.classList.add('show-footer');
+        // Remove the event listener to prevent multiple triggers
+        window.removeEventListener('wheel', detectFurtherScroll);
+    }
+}
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- Footer -->
+<footer id="footer" style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="flex: 1;">
+        <img src="images/welder.png" alt="Company Logo" style="max-height: 60px;">
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <ul class="copyright" style="list-style: none; padding: 0; margin: 0;">
+            <li>&copy; Ace Steel Innovations. All rights reserved.</li>
+        </ul>
+    </div>
+    <div style="flex: 1; text-align: right;">
+        <p>
+            Address: 1234 Steel Avenue, Metaltown, USA<br>
+            Phone: (123) 456-7890<br>
+            Email: info@acesteel.com
+        </p>
+    </div>
+</footer>	
+<footer class="second-footer" id="secondFooter">
+    <p>Website Design by Joshua Batties</p>
+    <a href="https://github.com/joshbatties" target="_blank">
+        <img src="images/github.png" alt="GitHub" style="width: 24px; height: 24px;">
+    </a>
+    <a href="https://www.linkedin.com/in/joshua-batties" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+    </a>
+</footer>	
