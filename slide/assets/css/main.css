@@ -3597,6 +3597,54 @@ input, select, textarea {
 			padding-left: 1em; /* Add padding to move the image further left */
 		}
 
+		.main-footer {
+			display: flex;
+			background: #0b0d23;
+			padding: 2em 1em;
+			text-align: center;
+			height: 6em;
+			align-items: center;
+			justify-content: space-between;
+		}
+			.main-footer .copyright {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 0.8em;
+				line-height: 1em;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+			}
+	
+				.main-footer .copyright li {
+					border-left: solid 1px rgba(255, 255, 255, 0.3);
+					display: inline-block;
+					list-style: none;
+					margin-left: 1.5em;
+					padding-left: 1.5em;
+				}
+	
+					.main-footer .copyright li:first-child {
+						border-left: 0;
+						margin-left: 0;
+						padding-left: 0;
+					}
+	
+					.main-footer .copyright li a {
+						color: inherit;
+					}
+					
+			.main-footer p {
+				margin: 0;
+				padding: 0;
+			}	
+	
+			.main-footer div:first-child {
+				flex: 1;
+				display: flex;
+				justify-content: flex-start; /* Align image to the left */
+				padding-left: 1em; /* Add padding to move the image further left */
+			}
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
