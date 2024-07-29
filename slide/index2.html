@@ -180,7 +180,7 @@
                             <li><a href="index.html">Plan Scheduling</a></li>    
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="button primary">Contact Us</a></li>
+                    <li><a href="#" class="button primary">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -195,6 +195,10 @@
         <span class="image" style="display: inline-block;">
             <video class="custom-video" src="images/welding_video.mp4" autoplay loop muted playsinline></video>
         </span>
+        <img src="images/growth_chart.png" alt="Growth Chart" style="width: 500px; height: auto; position: absolute; top: 50%; left: calc(50% + 350px); transform: translate(-50%, -50%);">
+        <div class="text" style="position: absolute; top: calc(50% + 270px); left: calc(50% + 350px); transform: translateX(-50%); white-space: nowrap;">
+            <p style="color: white;">Join one of the fastest growing steel suppliers in Australia.</p>
+        </div>
         <footer class="major" style="position: relative; text-align: center; margin-top: 20px;"> <!-- Adjusted positioning -->
             <ul class="actions special" style="display: inline-block; margin: 0; padding: 0;">
                 <li><a href="contact.html" class="button" style="position: absolute; top: 0; left: 26%; transform: translate(-50%, -50%);">Get a quote</a></li>
@@ -214,7 +218,7 @@
                     <img src="images/mesh_background.jpg" alt="" />
                     <div class="text">
                         <h3>Ace Steel Innovations: Building for the Future</h3>
-                        <p>Innovation drives every project we undertake at ASI. This drive ensures we consistently deliver exceptional quality.</p>
+                        <p>Innovation drives every project we undertake at ASI. This drive for innovation ensures we consistently deliver exceptional quality.</p>
                         <p>Our commitment goes beyond building the highest quality steel structures; we create strong relationships with our clients through our professional, friendly, and dependable approach, coupled with innovative solutions and swift adaptability.</p>
                         <p>We look forward to working with you on your next project.</p>
                         <footer class="major" style="margin-top: -40px;"> <!-- Adjust margin-top to move the button upwards -->
@@ -260,11 +264,6 @@
                     <h3>Plan Scheduling</h3>
                     <p>Our engineering team meticulously plans every aspect of your build, providing you with comprehensive schedules to coordinate your project.</p>
                 </section>
-                <section class="col-4 col-6-medium col-12-xsmall" style="order: 1;">
-                    <img src="images/plan.png" alt="Plan Scheduling" style="width: 70px; height: auto; margin-bottom: 10px;">
-                    <h3>Steel Accessories</h3>
-                    <p>Placeholder, Mesh picture (barchairs)</p>
-                </section>
             </div>
         </div>
         <footer class="major" style="margin-top: -40px;"> <!-- Adjust margin-top to move the button upwards -->
@@ -282,36 +281,12 @@
 			<h2>Get in touch.</h2>
 			<p>Describe your needs and one of our team members will be in contact to assist you.</p>
 		</header>
-		<form action="https://formsubmit.co/e21af56276f202ce8918c6c09852f23d" method="POST" id="contact-form">
-            <div class="row gtr-uniform gtr-50">
-                <div class="col-6 col-12-xsmall">
-                    <input type="text" name="name" id="name" placeholder="Name" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                    <input type="text" name="phone" id="phone" placeholder="Phone" required />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                    <input type="text" name="company" id="company" placeholder="Company (Optional)" />
-                </div>
-                <div class="col-12">
-                    <textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
-                </div>
-                <div class="col-12">
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                        <li><input type="reset" value="Reset Form" /></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Hidden inputs for FormSubmit configuration -->
-            <input type="hidden" name="_next" value="http://127.0.0.1:5501/wood/thankyou.html">
-            <input type="hidden" name="_subject" value="New submission from 1SQM Website">
-            <input type="hidden" name="_autoresponse" value="Thank you for your message. We will get back to you soon.">
-            <input type="hidden" name="_template" value="table">
-        </form>
+		<form method="post" action="#" class="cta">
+			<div class="row gtr-uniform gtr-50">
+				<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+				<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
+			</div>
+		</form>
 	</div>
 </section>
 	
