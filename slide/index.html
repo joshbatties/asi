@@ -217,6 +217,7 @@
     #five .col-12,
     #five .col-12-xsmall {
         padding: 10px;
+        box-sizing: border-box;
     }
 
     #five .col-6 {
@@ -232,6 +233,7 @@
     #five input[type="email"],
     #five textarea {
         width: 100%;
+        box-sizing: border-box;
     }
 
     #five .actions {
@@ -245,7 +247,8 @@
     }
 
     @media screen and (max-width: 736px) {
-        #five .col-6 {
+        #five .col-6,
+        #five .col-12-xsmall {
             width: 100%;
         }
     }
@@ -429,25 +432,25 @@
             <p>Describe your needs and one of our team members will be in contact to assist you.</p>
         </header>
         <div class="form-container">
-            <form action="https://formsubmit.co/e21af56276f202ce8918c6c09852f23d" method="POST" id="contact-form">
-                <div class="row gtr-uniform gtr-50">
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="name" id="name" placeholder="Name" required />
+            <form action="https://formsubmit.co/e21af56276f202ce8918c6c09852f23d" method="POST" id="contact-form" style="max-width: 800px; margin: 0 auto;">
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1 1 40%; min-width: 200px;">
+                        <input type="text" name="name" id="name" placeholder="Name" required style="width: 100%;" />
                     </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="email" name="email" id="email" placeholder="Email" required />
+                    <div style="flex: 1 1 40%; min-width: 200px;">
+                        <input type="email" name="email" id="email" placeholder="Email" required style="width: 100%;" />
                     </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="phone" id="phone" placeholder="Phone" required />
+                    <div style="flex: 1 1 40%; min-width: 200px;">
+                        <input type="text" name="phone" id="phone" placeholder="Phone" required style="width: 100%;" />
                     </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="company" id="company" placeholder="Company (Optional)" />
+                    <div style="flex: 1 1 40%; min-width: 200px;">
+                        <input type="text" name="company" id="company" placeholder="Company (Optional)" style="width: 100%;" />
                     </div>
-                    <div class="col-12">
-                        <textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
+                    <div style="flex: 1 1 100%;">
+                        <textarea name="message" id="message" placeholder="Message" rows="4" required style="width: 100%;"></textarea>
                     </div>
-                    <div class="col-12">
-                        <ul class="actions">
+                    <div style="flex: 1 1 100%;">
+                        <ul class="actions" style="display: flex; gap: 10px; padding: 0; list-style: none;">
                             <li><input type="submit" value="Send Message" class="primary" /></li>
                             <li><input type="reset" value="Reset Form" /></li>
                         </ul>
@@ -462,6 +465,7 @@
         </div>
     </div>
 </section>
+
 
 
 
