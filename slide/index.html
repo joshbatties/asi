@@ -145,7 +145,7 @@
 
         #products .products-container {
             width: 100%;
-            max-width: 800px; /* Adjust this value to control the overall width of the product grid */
+            max-width: 800px; /* Adjust this value to change overall grid size */
             margin: 0 auto;
         }
 
@@ -157,24 +157,43 @@
 
         #products .col-6,
         #products .col-12-medium {
-            display: flex;
+            width: 50%;
             padding: 10px;
-            width: 50%; /* Keep it at 50% to maintain 2 columns */
+            box-sizing: border-box;
         }
 
         #products .product-box {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            padding: 15px;
-            text-align: center;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            aspect-ratio: 1 / 1;
+            height: 0;
+            padding-bottom: 100%; /* This creates a square aspect ratio */
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s ease; /* Add transition for smooth zoom effect */
+        }
+
+        #products .product-box:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        #products .product-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); /* Gradient overlay for better text visibility */
+            transition: background 0.3s ease; /* Smooth transition for gradient */
+        }
+
+        #products .product-box:hover .product-content {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 100%); /* Darker gradient on hover */
         }
 
         #products .product-box::before {
@@ -184,35 +203,35 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        #products .product-box:hover::before {
+            background-color: rgba(0, 0, 0, 0.1); /* Lighten the overlay on hover */
         }
 
         #products .product-box h3 {
-            margin-bottom: 10px;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 0 0 10px 0;
             position: relative;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
             z-index: 1;
-            font-size: 1em;
+            font-size: 1.75em;
+            font-weight: bold;
+            text-align: left;
+            transition: transform 0.3s ease;
         }
 
-        #products .product-box .button {
-            align-self: center;
-            margin-top: auto;
-            position: relative;
-            z-index: 1;
-            font-size: 0.9em;
-            padding: 0.5em 1em;
+        #products .product-box:hover h3 {
+            transform: translateY(-5px); /* Slight upward movement on hover */
         }
+
 
         @media screen and (max-width: 480px) {
             #products .col-6,
             #products .col-12-medium {
-                width: 100%; /* Full width for very small screens */
+                width: 100%;
             }
         }
 
@@ -358,41 +377,49 @@
         </section>
 
         <!-- Products Section -->
-    <section id="products" class="wrapper style1 special fade-up" style="--product-grid-size: 400px;">
-        <div class="container">
-            <header class="major">
-                <h2>Our Products</h2>
-            </header>
-            <div class="products-container">
-                <div class="row gtr-uniform">
-                    <div class="col-6 col-12-medium">
-                        <div class="product-box" style="background-image: url('images/rebar.jpg');">
-                            <h3>Steel Reinforcing Bar</h3>
-                            <a href="#" class="button">Learn More</a>
+        <section id="products" class="wrapper style1 special fade-up">
+            <div class="container">
+                <header class="major">
+                    <h2>Our Products</h2>
+                </header>
+                <div class="products-container">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-medium">
+                            <div class="product-box" style="background-image: url('images/rebar.jpg');">
+                                <div class="product-content">
+                                    <h3>Steel Reinforcing Bar</h3>
+                                    <a href="#" class="button">Learn More →</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <div class="product-box" style="background-image: url('images/fabrication.jpg');">
-                            <h3>Steel Fabrication</h3>
-                            <a href="#" class="button">Learn More</a>
+                        <div class="col-6 col-12-medium">
+                            <div class="product-box" style="background-image: url('images/fabrication.jpg');">
+                                <div class="product-content">
+                                    <h3>Steel Fabrication</h3>
+                                    <a href="#" class="button">Learn More →</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <div class="product-box" style="background-image: url('images/mesh.jpg');">
-                            <h3>Steel Mesh</h3>
-                            <a href="#" class="button">Learn More</a>
+                        <div class="col-6 col-12-medium">
+                            <div class="product-box" style="background-image: url('images/mesh.jpg');">
+                                <div class="product-content">
+                                    <h3>Steel Mesh</h3>
+                                    <a href="#" class="button">Learn More →</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-12-medium">
-                        <div class="product-box" style="background-image: url('images/accessories.jpeg');">
-                            <h3>Tools & Accessories</h3>
-                            <a href="#" class="button">Learn More</a>
+                        <div class="col-6 col-12-medium">
+                            <div class="product-box" style="background-image: url('images/accessories.jpeg');">
+                                <div class="product-content">
+                                    <h3>Tools & Accessories</h3>
+                                    <a href="#" class="button">Learn More →</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 				<!-- One -->
 <section id="services" class="wrapper style1 special fade-up">
